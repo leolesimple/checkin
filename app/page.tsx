@@ -1,103 +1,209 @@
+'use client';
+
 import Image from "next/image";
+import Title from "@app/ui/titles";
+import Button from "@app/ui/button";
+import Link from "next/link"
+import Footer from "@app/ui/footer";
+import { PresentationChartBarIcon, DevicePhoneMobileIcon, SparklesIcon, BeakerIcon } from '@heroicons/react/24/outline'
+
+const features = [
+    {
+        name: 'Keynote',
+        description:
+            'A bold introduction to our latest advancements, where breakthrough ideas meet powerful new realities.',
+        icon: PresentationChartBarIcon,
+    },
+    {
+        name: 'Hands‑on',
+        description:
+            'A closer look at what’s next. Experience our most refined technologies crafted to feel as good as they perform.',
+        icon: DevicePhoneMobileIcon,
+    },
+    {
+        name: 'Taste Bar',
+        description:
+            'Time to pause, recharge, and take it all in—with curated flavors designed to complement the experience.',
+        icon: SparklesIcon,
+    },
+    {
+        name: 'Inside Liquid Glass',
+        description:
+            'An exclusive journey into the design lab behind our most expressive interface yet where clarity meets intuition.',
+        icon: BeakerIcon,
+    },
+]
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    return (
+        <>
+            <main className="min-h-screen w-full bg-stone-900 text-neutral-100">
+                <Image
+                    src="/img/appleParkEntrance.webp"
+                    alt=""
+                    width={800}
+                    height={449}
+                    className=" overflow-hidden w-auto h-auto mx-auto max-h-[600px] object-fill object-center rounded-2xl"/>
+                <div className={"max-w-[1140px] mx-auto mt-10 h-75 flex flex-col items-center"}>
+                    <Title heading="Feathered In" tag="h1" className="text-6xl text-center"/>
+                    <p className="mt-4 text-lg w-fit text-center">
+                        Join us in person on September 10 at 7 p.m.<br/>
+                        Steve Jobs Theater, Cupertino.<br/>
+                        Learn more at apple.com.
+                    </p>
+                    <Link href="/register" className={"mx-auto mt-4"}>
+                        <Button asChild>
+                            <span>Register</span>
+                        </Button>
+                    </Link>
+                </div>
+                <Hero></Hero>
+                <Bento></Bento>
+            </main>
+            <Footer></Footer>
+        </>
+    );
 }
+
+function Hero() {
+    return (
+        <div className="py-24 sm:py-32">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="mx-auto max-w-2xl lg:text-center">
+                    <h2 className="text-base/7 font-semibold text-stone-500">In the spotlight.</h2>
+                    <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-stone-300 sm:text-5xl lg:text-balance">
+                        Discover what the day holds.
+                    </p>
+                    <p className="mt-6 text-lg/8 text-stone-400">
+                        From bold announcements to immersive moments, from hands-on demos to a rare look behind the curtain, this isn’t just an event. It’s everything we’ve been working toward.
+                    </p>
+                </div>
+                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                        {features.map((feature) => (
+                            <div key={feature.name} className="relative pl-16">
+                                <dt className="text-3xl font-semibold text-stone-300">
+                                    <div className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-blue-700">
+                                        <feature.icon aria-hidden="true" className="size-6 text-stone-100" />
+                                    </div>
+                                    {feature.name}
+                                </dt>
+                                <dd className="mt-2 text-base/7 text-stone-400">{feature.description}</dd>
+                            </div>
+                        ))}
+                    </dl>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function Bento() {
+    return (
+        <div className="bg-stone-900 py-24 sm:py-32">
+            <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+                <h2 className="text-center text-base/7 font-semibold text-stone-500">Come to the Apple Park</h2>
+                <p className="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-neutral-100 sm:text-5xl">
+                    Welcome Inside.
+                </p>
+                <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+                    <div className="relative lg:row-span-2">
+                        <div className="absolute inset-px rounded-lg bg-stone-800 lg:rounded-l-4xl" />
+                        <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                            <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                                <p className="mt-2 text-lg tracking-tight text-neutral-100 max-lg:text-center font-bold">
+                                    Wallet Pass
+                                </p>
+                                <p className="mt-2 max-w-lg text-sm/6 text-stone-500 max-lg:text-center">
+                                    Your ticket to the event. Add it to your Apple Wallet for easy access.
+                                </p>
+                            </div>
+                            <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
+                                <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] shadow-2xl">
+                                    <Image
+                                        alt="App preview on mobile device"
+                                        src="/img/wallet-passes.png"
+                                        width={600}
+                                        height={400}
+                                        className="w-full h-full object-cover object-top"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/10 lg:rounded-l-4xl" />
+                    </div>
+                    {/* Performance */}
+                    <div className="relative max-lg:row-start-1">
+                        <div className="absolute inset-px rounded-lg bg-stone-800 max-lg:rounded-t-4xl" />
+                        <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+                            <div className="px-8 pt-8 sm:px-10 sm:pt-10">
+                                <p className="mt-2 text-lg tracking-tight text-neutral-100 max-lg:text-center font-bold">Identity. Checked</p>
+                                <p className="mt-2 max-w-lg text-sm/6 text-stone-500 max-lg:text-center">
+                                    Come with your ID and check in at the entrance. We’ll take care of the rest.
+                                </p>
+                            </div>
+                            <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+                                <Image
+                                    alt="Performance chart visualization"
+                                    src={"/img/identity-wallet.png"}
+                                    width={600}
+                                    height={400}
+                                    className="w-full max-lg:max-w-xs"
+                                />
+                            </div>
+                        </div>
+                        <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/10 max-lg:rounded-t-4xl" />
+                    </div>
+                    {/* Security */}
+                    <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+                        <div className="absolute inset-px rounded-lg bg-stone-800" />
+                        <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+                            <div className="px-8 pt-8 sm:px-10 sm:pt-10">
+                                <p className="mt-2 text-lg tracking-tight text-neutral-100 max-lg:text-center font-bold">Security</p>
+                                <p className="mt-2 max-w-lg text-sm/6 text-stone-500 max-lg:text-center">
+                                    In today’s global context, security is our top priority. We’ve implemented robust measures to ensure the safety of all attendees.
+                                </p>
+                            </div>
+                            <div className="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
+                                <Image
+                                    alt="Security shield icon"
+                                    width={600}
+                                    height={400}
+                                    src="/img/privacy.webp"
+                                    className="h-[130px] w-auto m-auto object-cover"
+                                />
+                            </div>
+                        </div>
+                        <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/10" />
+                    </div>
+                    {/* Powerful APIs */}
+                    <div className="relative lg:row-span-2">
+                        <div className="absolute inset-px rounded-lg bg-stone-800 max-lg:rounded-b-4xl lg:rounded-r-4xl" />
+                        <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+                            <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                                <p className="mt-2 text-lg tracking-tight text-neutral-100 max-lg:text-center font-bold">
+                                    Arrival Essentials
+                                </p>
+                                <p className="mt-2 max-w-lg text-sm/6 text-stone-500 max-lg:text-center">
+                                    Pick up your essentials upon check-in. A curated kit to help you settle in—and take a little something home.
+                                </p>
+                            </div>
+                            <div className="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
+                                <Image
+                                    alt="Security shield icon"
+                                    width={600}
+                                    height={400}
+                                    src="/img/goodies.png"
+                                    className="h-[130px] w-auto m-auto object-cover"
+                                />
+                            </div>
+                        </div>
+                        <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/10 max-lg:rounded-b-4xl lg:rounded-r-4xl" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
