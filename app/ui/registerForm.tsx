@@ -76,7 +76,7 @@ type FormState = {
 type ErrorState = Partial<Record<keyof FormState, string>>;
 
 export default function RegisterForm() {
-    const [submitted, setSubmitted] = useState(false);
+    //const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [toast, setToast] = useState<string | null>(null);
     const [summary, setSummary] = useState<FormState | null>(null);
@@ -107,10 +107,12 @@ export default function RegisterForm() {
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const {name, value, type, checked} = e.target;
+        const { name, value, type } = e.target;
         setForm(prev => ({
             ...prev,
-            [name]: type === 'checkbox' ? checked : value
+            [name]: type === 'checkbox'
+                ? (e.target as HTMLInputElement).checked
+                : value
         }));
     };
 
