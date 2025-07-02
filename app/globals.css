@@ -4,3 +4,21 @@
 * {
     letter-spacing: -0.5px;
 }
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0px, 0px) rotate(-0.3deg);
+    }
+    50% {
+        transform: translate(2px, -2px) rotate(0.3deg);
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.animate-bis {
+    animation: float 4s ease-in-out infinite;
+    animation-delay: .2s;
+}
