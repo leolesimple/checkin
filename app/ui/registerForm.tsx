@@ -56,7 +56,74 @@ const FlightSelect = ({
         >
             <option value="" disabled>Select your flight</option>
             <option value="none">No flight needed, I will come by myself.</option>
-            {/* Les <optgroup> sont conservés tels quels */}
+            <optgroup label="France">
+              <option value="DL8500">DL8500, CDG‑SFO, 12h30</option>
+              <option value="DL8501">DL8501, CDG‑SFO, 14h00</option>
+              <option value="AF8802">AF8802, CDG‑SFO, 16h45</option>
+              <option value="AF8803">AF8803, CDG‑SFO, 19h10</option>
+              <option value="AF8804">AF8804, CDG‑SFO, 21h00</option>
+            </optgroup>
+            <optgroup label="Germany">
+              <option value="LH9001">LH9001, FRA‑SFO, 10h00</option>
+              <option value="LH9002">LH9002, FRA‑SFO, 12h30</option>
+              <option value="LH9003">LH9003, FRA‑SFO, 15h00</option>
+              <option value="LH9004">LH9004, FRA‑SFO, 17h45</option>
+              <option value="LH9005">LH9005, FRA‑SFO, 20h15</option>
+            </optgroup>
+            <optgroup label="Japan">
+              <option value="JL7001">JL7001, NRT‑SFO, 09h15</option>
+              <option value="JL7002">JL7002, NRT‑SFO, 12h00</option>
+              <option value="JL7003">JL7003, NRT‑SFO, 14h30</option>
+              <option value="NH7004">NH7004, HND‑SFO, 16h45</option>
+              <option value="NH7005">NH7005, HND‑SFO, 18h20</option>
+            </optgroup>
+            <optgroup label="USA">
+              <option value="UA1001">UA1001, JFK‑SFO, 08h00</option>
+              <option value="UA1002">UA1002, JFK‑SFO, 10h30</option>
+              <option value="AA1003">AA1003, MIA‑SFO, 13h20</option>
+              <option value="DL1004">DL1004, ATL‑SFO, 15h00</option>
+              <option value="UA1005">UA1005, ORD‑SFO, 17h10</option>
+            </optgroup>
+            <optgroup label="United Kingdom">
+              <option value="BA0289">BA0289, LHR‑SFO, 11h15</option>
+              <option value="BA0288">BA0288, LHR‑SFO, 13h45</option>
+              <option value="VS0234">VS0234, LHR‑SFO, 16h20</option>
+              <option value="UA1971">UA1971, LHR‑SFO, 19h00</option>
+            </optgroup>
+            <optgroup label="Canada">
+              <option value="AC0759">AC0759, YYZ‑SFO, 09h00</option>
+              <option value="AC0760">AC0760, YYZ‑SFO, 11h30</option>
+              <option value="WS0123">WS0123, YYZ‑SFO, 14h10</option>
+              <option value="WS0124">WS0124, YYZ‑SFO, 17h50</option>
+            </optgroup>
+            <optgroup label="Australia">
+              <option value="QF00074">QF00074, SYD‑SFO, 22h30</option>
+              <option value="QF00075">QF00075, MEL‑SFO, 23h45</option>
+              <option value="CX0889">CX0889, SYD‑SFO, 20h15</option>
+            </optgroup>
+            <optgroup label="Middle East">
+              <option value="EK216">EK216, DXB-SFO, 09h35</option>
+              <option value="EK215">EK215, SFO-DXB, 21h10</option>
+              <option value="QR106">QR106, DOH-SFO, 08h00</option>
+              <option value="QR105">QR105, SFO-DOH, 20h40</option>
+            </optgroup>
+            <optgroup label="Asia">
+              <option value="SQ31">SQ31, SIN-SFO, 11h50</option>
+              <option value="SQ32">SQ32, SFO-SIN, 12h55</option>
+              <option value="CX881">CX881, HKG-SFO, 10h30</option>
+              <option value="CX880">CX880, SFO-HKG, 23h20</option>
+            </optgroup>
+            <optgroup label="South America">
+              <option value="LA8030">LA8030, EZE-SFO, 22h10</option>
+              <option value="LA8031">LA8031, SFO-EZE, 23h55</option>
+              <option value="AA9712">AA9712, MEX-SFO, 18h00</option>
+              <option value="AA9713">AA9713, SFO-MEX, 20h30</option>
+            </optgroup>
+            <optgroup label="Africa">
+              <option value="SA054">SA054, JNB-SFO, 13h00</option>
+              <option value="SA055">SA055, SFO-JNB, 22h45</option>
+              <option value="ET602">ET602, ADD-SFO, 07h15</option>
+            </optgroup>
         </select>
     );
 };
