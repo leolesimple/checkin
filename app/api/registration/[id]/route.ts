@@ -12,15 +12,30 @@ type ParamsContext = {
 
 export async function GET(req: NextRequest, context: any) {
     const { id } = (context as ParamsContext).params
+    const apiKey = req.headers.get('authorization')?.replace('Bearer ', '')
 
-    const { data, error } = await supabase
+    if (!apiKey) {
+        return NextResponse.json({ error: 'Missing API key' }, { status: 401 })
+    }
+
+    const { data: keyRecord, error } = await supabase
+        .from('api_key')
+        .select('id_user')
+        .eq('api_key', apiKey)
+        .single()
+
+    if (error || !keyRecord) {
+        return NextResponse.json({ error: 'Unauthorized - invalid API key' }, { status: 403 })
+    }
+
+    const { data, error: dbError } = await supabase
         .from('registrations')
         .select('*')
         .eq('id', id)
         .single()
 
-    if (error) {
-        return NextResponse.json({ error: error.message }, { status: 404 })
+    if (dbError) {
+        return NextResponse.json({ error: dbError.message }, { status: 404 })
     }
 
     return NextResponse.json(data)
