@@ -6,10 +6,8 @@ const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
 
-export async function GET(request: NextRequest, context: { params: { id: string } }) {
-    const {
-        params: { id },
-    } = context
+export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+    const { id } = params
 
     const { data, error } = await supabase
         .from('registrations')
