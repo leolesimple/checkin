@@ -76,6 +76,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
-            <Breadcrumbs/></>
-)
+            <Breadcrumbs />
+        </>
+    );
 }

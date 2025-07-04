@@ -272,9 +272,7 @@ export default function RegisterForm() {
                     onChange={handleChange}
                 />
                 <label htmlFor="consent" className="text-sm text-stone-400">
-                    I agree to the processing of my data in accordance with our <a href="/privacy"
-                                                                                   className="underline hover:text-white">privacy
-                    policy</a>.
+                    I agree to the processing of my data in accordance with our <a href="/privacy" className="underline hover:text-white">privacy policy</a>.
                 </label>
                 {errors.consent && <span className="text-red-500 text-xs">{errors.consent}</span>}
             </div>

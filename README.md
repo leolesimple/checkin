@@ -43,8 +43,18 @@ Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/leolesimple/next-event.git
-cd event
+cd next-event
 npm install # or yarn, pnpm, bun
+```
+
+### Environment Variables
+
+Create a `.env.local` file at the project root and provide your Supabase credentials:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
+SUPABASE_SERVICE_ROLE_KEY=<your-service-role-key>
 ```
 
 ### Running the Development Server
