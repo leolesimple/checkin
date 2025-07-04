@@ -1,32 +1,34 @@
-# 🍏 Apple Event Visitor Management App
+# ✅ Checkin — Visitor Management Web App
 
-Welcome to the **Apple Event Visitor Management App**! This is a modern web application built with [Next.js](https://nextjs.org) and TypeScript, designed specifically for a fictional Apple Event. The platform allows visitors to register for the event and provides a backend dashboard for event organizers to manage and control attendee access.
+Welcome to **Checkin**, a modern web application built with [Next.js](https://nextjs.org) and TypeScript for event registration and attendee management.
+
+This project was designed as a fictional visitor management system, using an Apple Event as the creative setting to explore a premium, clean and branded experience. The app allows visitors to register for an event, while providing organizers with a secure admin dashboard to manage attendees.
 
 ---
 
 ## 🚀 About the Project
 
-This project simulates a real-world event management system for a fake Apple Event. It features:
+**Checkin** simulates a real-world event management system with:
 
-- **Visitor Registration:** Attendees can sign up for the event through a user-friendly registration form.
-- **Admin Dashboard:** Organizers can view, manage, and control registered visitors from a secure dashboard.
-- **Legal Compliance:** Includes dedicated pages for Privacy Policy, Terms of Service, and Cookie Policy.
-- **Modern UI:** Built with reusable and accessible UI components, styled for a premium Apple-like experience.
-- **Responsive Design:** Fully optimized for all devices.
-- **Optimized Assets:** Uses high-quality Apple-themed images and optimized font loading with `next/font`.
+- **Visitor Registration**: A user-friendly sign-up flow for attendees.
+- **Admin Dashboard**: Event staff can view, manage, and control participant access.
+- **Legal Compliance**: Includes dedicated pages for Privacy Policy, Terms of Service, and Cookie Policy.
+- **Modern UI**: Reusable and accessible components styled with inspiration from Apple’s clean aesthetic.
+- **Responsive Design**: Optimized for desktops, tablets and mobile devices.
+- **Branded Assets**: Uses high-quality, Apple-inspired visuals and optimized fonts.
 
 ---
 
 ## ✨ Features
 
-- Next.js 14+ App Router architecture
-- TypeScript for type safety
-- Modular UI components (buttons, forms, navigation, etc.)
-- Event registration flow
-- Legal pages (Privacy, Terms, Cookies)
-- Studio dashboard for event staff
-- Responsive, mobile-first design
-- Apple-inspired branding and assets
+- Built with Next.js 14+ App Router architecture
+- Written in TypeScript for reliability
+- Modular and reusable UI components
+- Full registration flow for participants
+- Secure dashboard for event management
+- Legal documentation pages
+- Fully responsive design
+- Apple-inspired interface and branding (for demo purposes only)
 
 ---
 
@@ -39,17 +41,15 @@ This project simulates a real-world event management system for a fake Apple Eve
 
 ### Installation
 
-Clone the repository and install dependencies:
-
 ```bash
-git clone https://github.com/leolesimple/next-event.git
-cd next-event
-npm install # or yarn, pnpm, bun
-```
+git clone https://github.com/leolesimple/checkin.git
+cd checkin
+npm install
+````
 
 ### Environment Variables
 
-Create a `.env.local` file at the project root and provide your Supabase credentials:
+Create a `.env.local` file at the project root:
 
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
@@ -57,26 +57,13 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
 SUPABASE_SERVICE_ROLE_KEY=<your-service-role-key>
 ```
 
-### Running the Development Server
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app.
-
-### Building for Production
-
-```bash
-npm run build
-npm start
-```
+Then visit: [http://localhost:3000](http://localhost:3000)
 
 ---
 
@@ -84,43 +71,34 @@ npm start
 
 ```
 app/
-  (dashboard)/         # Admin dashboard pages
-  (legal)/             # Legal pages (cookies, privacy, terms)
-  register/            # Visitor registration page
-  studio/              # Studio dashboard for event staff
-  ui/                  # Reusable UI components
-public/img/            # Apple-themed static images
+  (dashboard)/         # Admin interface
+  (legal)/             # Privacy, terms and cookie policy
+  register/            # Public registration page
+  studio/              # Internal tools
+  ui/                  # Shared components
+public/img/            # Branded static visuals
 ```
 
-- **app/layout.tsx**: Root layout
-- **app/page.tsx**: Main landing page
-- **app/ui/**: Buttons, forms, navbar, etc.
-
 ---
 
-## 🧑‍💻 Technologies Used
+## 🧑‍💻 Tech Stack
 
-- [Next.js](https://nextjs.org)
-- [React](https://react.dev)
-- [TypeScript](https://www.typescriptlang.org)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please open issues or submit pull requests for improvements or bug fixes.
+* [Next.js](https://nextjs.org)
+* [React](https://react.dev)
+* [TypeScript](https://www.typescriptlang.org)
+* [Supabase](https://supabase.com)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+This project is licensed under the **GNU AGPL v3**.
 
-If you require additional permissions or wish to use this project beyond the terms of the AGPL, please contact the repository owner.
+> ℹ️ This demo is a fictional application, not affiliated with Apple Inc.
+> Assets and branding elements inspired by Apple are used purely for educational and illustrative purposes.
 
 ---
 
-## 🙏 Acknowledgements
+## 🙌 Contributions
 
-- This project is a fictional demo and is not affiliated with Apple Inc.
-- Apple logos and images are used for educational and demonstration purposes only.
+Suggestions and contributions are welcome! Feel free to open an issue or submit a pull request.
